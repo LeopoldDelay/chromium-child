@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<div class="email_wrapper">
+        <div class="email_header">
+			<h2>Ma demande de devis du %quote_created_at%</h2>
+        </div>
+        <div class="email_body">
+            <div class="email_intro">
+                Bonjour %user_firstname%, 
+                Vous avez effectué une demande de devis %quote_type% le %quote_created_at%. Elle porte le numéro %quote_id% .
+                Nous avons bien reçu votre demande et allons la traiter dans les plus brefs delais. 
+                <br>
+                Voici un récapitulatif de votre demande de devis : 
+            </div>
+			<br>
+            <ul class="email_cart">
+                %items_to_quote%
+            </ul>
+            <div class="email_more_info">
+                Informations supplémentaires : %quote_more_info%
+            </div>
+            <div class="email_info">
+                Vous pouvez retrouver votre demande de devis dans la rubrique Mon compte / Mes devis.
+            </div>
+			<br>
+            <div class="email_outro">
+                Nous vous remercions pour votre confiance.
+                <br>
+                A très bientôt sur <a href="https://koncrete.fr">koncrete.fr</a> .
+            </div>
+        </div>
+		<div class="email_footer">
+		Léopold - Directeur operationel
+		<img src="https://koncrete.fr/wp-content/uploads/2022/04/koncrete_logo_noir-e1651564966482.png" style=" width: 200px; margin-top:15px;">
+	</div>
+</div>
+
+	<style>
+	.email_footer {
+		display: flex;
+		flex-direction: column;
+		margin-top:25px;
+	}
+	.item_name{
+	 font-weight:600;
+	}
+	
+	
+	</style>
+	
+</html>
