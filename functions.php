@@ -3,6 +3,7 @@ function my_theme_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
 }
 
+
 require_once('functions_shipping.php');
 require_once('functions_quotation.php');
 require_once('functions_product.php');
