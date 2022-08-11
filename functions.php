@@ -46,7 +46,6 @@ function custom_redirection_after_registration( $redirection_url ){
 add_shortcode( 'wc_reg_form_bbloomer2', 'bbloomer_separate_registration_form2' );
     
 function bbloomer_separate_registration_form2() {
-   	ob_clean();
 	ob_start();
 	//if ( is_admin() ) return;
    if ( is_user_logged_in() ) {
@@ -89,7 +88,7 @@ function bbloomer_separate_registration_form2() {
 			  
  		  <?php if ( 'no' === get_option( 'woocommerce_registration_generate_password' ) ) : ?>
 				<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-					<label for="reg_password"><?php esc_html_e( 'Password', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
+					<label for="reg_password"><?php esc_html_e( 'Mot de passe', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
 					<input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password" id="reg_password" autocomplete="new-password" />
 				</p>
 		  <?php else : ?>
@@ -136,7 +135,7 @@ function bbloomer_separate_registration_form2() {
 			  
  		  <?php if ( 'no' === get_option( 'woocommerce_registration_generate_password' ) ) : ?>
 				<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-					<label for="reg_password"><?php esc_html_e( 'Password', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
+					<label for="reg_password"><?php esc_html_e( 'Mot de passe', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
 					<input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password" id="reg_password" autocomplete="new-password" />
 				</p>
 		  <?php else : ?>
@@ -383,12 +382,12 @@ function add_links( $menu_links ){
 	// we will hook "anyuniquetext123" later
 	$new = array( 'mes-devis' => 'Mes devis', 'suivi-livraison' => 'Suivi de mes livraisons', 'mes-chantiers'=>'Mes chantiers'); 
 	$new2 = array('favoris' => 'Mes favoris');
-	$new_orders = array('orders' => 'Mes commandes');
+	$new_orders = array('orders' => __( 'Orders', 'woocommerce' )); //Mes commandes
 
 	$new3 = array('payment-methods' => 'Mes moyens de paiement');
 	
 	$new_edit_account = array('edit-account' => 'Mes informations personnelles');
-	$user_logout = array('customer-logout'=> 'Deconnexion');
+	$user_logout = array('customer-logout'=> __('Logout', 'woocommerce' )); //Deconnexion
 	   
 	// array_slice() is good when you want to add an element between the other ones
 	$menu_links =  array_slice( $menu_links, 0, 2, true ) 

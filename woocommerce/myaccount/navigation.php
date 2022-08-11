@@ -26,7 +26,7 @@ do_action( 'woocommerce_before_account_navigation' );
 	<ul>
 		<?php foreach ( wc_get_account_menu_items() as $endpoint => $label ) : ?>
 			<a href="<?php echo esc_url( wc_get_account_endpoint_url( $endpoint ) ); ?>" name = "<?php checkCurrentPage($endpoint)?>">
-				<li id="<?php echo $endpoint; ?>"><?php echo esc_html( $label ); ?></li>
+				<li id="<?php echo $endpoint; ?>"><?php echo esc_html( __($label,'woocommerce') ); ?></li>
 			</a>
 		<?php endforeach; ?>
 	</ul>
